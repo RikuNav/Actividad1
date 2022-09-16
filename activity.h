@@ -17,7 +17,11 @@
 // @Complexity	??
 // =================================================================
 unsigned int sumaIterativa(unsigned int n) {
-	return 0;
+	int suma;
+	for (int i = 0; i <= n; i++){
+		suma = suma + i;
+	}
+	return suma;
 }
 
 // =================================================================
@@ -29,7 +33,14 @@ unsigned int sumaIterativa(unsigned int n) {
 // @Complexity	??
 // =================================================================
 unsigned int sumaRecursiva(unsigned int n) {
-	return 0;
+	int suma;
+	if(n == 2){
+		suma = 1 + 2;
+	}
+	else{
+		suma = n + sumaRecursiva(n - 1);
+	}
+	return suma;
 }
 
 // =================================================================
@@ -41,7 +52,9 @@ unsigned int sumaRecursiva(unsigned int n) {
 // @Complexity	??
 // =================================================================
 unsigned int sumaDirecta(unsigned int n) {
-	return 0;
+	int suma;
+	suma = (n * (n + 1))/ 2;
+	return suma;
 }
 
 #endif /* ACTIVITY_H */
